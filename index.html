@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Aleatória - Conhecimento Dinâmico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>📚 Academia Aleatória</h1>
+        <p>Conhecimento dinâmico a cada visita!</p>
+        <nav>
+            <button class="nav-btn active" onclick="changeSection('fatos')">Fatos</button>
+            <button class="nav-btn" onclick="changeSection('curiosidades')">Curiosidades</button>
+            <button class="nav-btn" onclick="changeSection('citacoes')">Citações</button>
+            <button class="nav-btn" onclick="changeSection('datas')">Datas Históricas</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content-area">
+            <div id="random-content">
+                <!-- Conteúdo será gerado dinamicamente -->
+            </div>
+            <button id="refresh-btn" onclick="refreshContent()">
+                🔄 Gerar Novo Conteúdo
+            </button>
+        </section>
+
+        <aside>
+            <div id="stats">
+                <h3>Estatísticas da Sessão</h3>
+                <div id="counter-display">
+                    <p>Conteúdos gerados: <span id="counter">0</span></p>
+                </div>
+                <div id="fun-fact">
+                    <h4>Sabia que?</h4>
+                    <p id="random-fun-fact"></p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Academia Aleatória | Atualizado em: <span id="current-date"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
